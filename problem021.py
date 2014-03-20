@@ -12,8 +12,8 @@ Evaluate the sum of all the amicable numbers under 10000.
 from numberUtil import getDivisors
 
 def d(n):
-    res = reduce(lambda x, y: x + y, getDivisors(n))
-    return res - n
+    temp = reduce(lambda x, y: x + y, getDivisors(n))
+    return temp - n
 
 count = 0
 for i in range(2,10000):

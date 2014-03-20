@@ -9,10 +9,10 @@ What is the sum of the digits of the number 2^1000?
 
 def sumBiPower(x):
     y = 2 ** x
-    res = 0
+    temp = 0
     while y > 0:
-        res += y % 10
+        temp += y % 10
         y /= 10
-    return res
+    return temp
 
 print sumBiPower(1000)

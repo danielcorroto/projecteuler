@@ -7,12 +7,12 @@ By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that 
 What is the 10 001st prime number?
 '''
 
-from numberUtil import primeGenerator
+from numberUtil import primeGeneratorQuantity
 
 def getNthPrime(x):
-    res = 0
-    for i in primeGenerator(10001):
-        res = i
-    return res
+    temp = 0
+    for i in primeGeneratorQuantity(10001):
+        temp = i
+    return temp
 
 print getNthPrime(10001)

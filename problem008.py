@@ -48,10 +48,10 @@ number = """73167176531330624919225119674426574742355349194934
 71636269561882670428252483600823257530420752963450"""
 
 def getProduct(number, pos):
-    res = 1
+    temp = 1
     for i in range(5):
-        res *= int(number[pos+i])
-    return res
+        temp *= int(number[pos+i])
+    return temp
 
 number = number.replace("\n", "")
 maxi = 0

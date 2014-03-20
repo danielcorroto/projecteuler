@@ -5,6 +5,7 @@ Created on Mar 18, 2014
 '''
 
 import math
+from math import sqrt
 
 
 if __name__ == '__main__':
@@ -27,7 +28,7 @@ def isPrime(x):
 
     return True
 
-def primeGenerator(maxi=-1):
+def primeGeneratorQuantity(maxi=-1):
     yield 2
     count = 1
     i = 3
@@ -35,6 +36,14 @@ def primeGenerator(maxi=-1):
         if isPrime(i):
             yield i
             count += 1
+        i += 2
+
+def primeGenerator(maxi=-1):
+    yield 2
+    i = 3
+    while (maxi < 0 or i < maxi):
+        if isPrime(i):
+            yield i
         i += 2
 
 
@@ -64,3 +73,11 @@ def getProperDivisors(x):
             if (i * i != x and i != 1):
                 result.append(x / i);
     return result;
+
+def mcd(x, y):
+    while y:
+        x, y = y, x % y
+    return x
+
+def isPandigital(x):
+    return "".join(sorted(str(x))) == "123456789"

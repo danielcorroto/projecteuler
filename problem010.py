@@ -10,11 +10,11 @@ Find the sum of all the primes below two million.
 from numberUtil import primeGenerator
 
 def sumPrimeUnder(x):
-    res = 0
+    temp = 0
     for i in primeGenerator():
         if (i < x):
-            res += i
+            temp += i
         else:
-            return res
+            return temp
 
 print sumPrimeUnder(2000000)

@@ -209,8 +209,8 @@ s = """37107287533902102798797998220837590246510135740250
 
 numbers = s.split()
 
-res = 0
+temp = 0
 for i in numbers:
-    res += int(i)
+    temp += int(i)
 
-print str(res)[:10]
+print str(temp)[:10]

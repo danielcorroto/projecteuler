@@ -24,19 +24,19 @@ def getFactorsGenerator(x):
 def mcm(x, y):
     a, b = (x, y) if x < y else (y, x)
 
-    res = b;
+    temp = b;
     for l in getFactorsGenerator(a):
         if b % l == 0:
             b /= l;
         else:
-            res *= l;
+            temp *= l;
 
-    return res;
+    return temp;
 
 def smallestEvenlyDivisible(x):
-    res = 1
+    temp = 1
     for i in range(1, x + 1):
-        res = mcm(res, i)
-    return res
+        temp = mcm(temp, i)
+    return temp
 
 print smallestEvenlyDivisible(20)

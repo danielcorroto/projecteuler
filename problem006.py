@@ -13,10 +13,10 @@ Find the difference between the sum of the squares of the first one hundred natu
 '''
 
 def sumOfSquare(x):
-    res = 0
+    temp = 0
     for i in range(1, x + 1):
-        res += i * i
-    return res
+        temp += i * i
+    return temp
 
 def squareOfSum(x):
     return ((x * x + x) / 2) ** 2
