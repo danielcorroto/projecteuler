@@ -5,8 +5,6 @@ Created on Mar 18, 2014
 '''
 
 import math
-from math import sqrt
-
 
 if __name__ == '__main__':
     pass
@@ -57,6 +55,9 @@ def isPalindrome(x):
     return x == y
 
 def getDivisors(x):
+    '''
+    Divisores incluido el mismo
+    '''
     result = []
     for i in range(1, int(math.sqrt(x) + .5) + 1):
         if (x % i == 0):
@@ -66,6 +67,9 @@ def getDivisors(x):
     return result;
 
 def getProperDivisors(x):
+    '''
+    Divisores sin incluir el mismo
+    '''
     result = []
     for i in range(1, int(math.sqrt(x) + .5) + 1):
         if (x % i == 0):
